@@ -61,14 +61,14 @@ app.post('/mail', async (req,res)=> {
     res.render('generate',{title:"Create New Password",msg:'',gmail:gmail,succ:''})
    }
    else {
-    res.render('forget',{ title: 'College Dunia', msg: '',succ:'',gmail:'',errors:'OTP NOT MATCHED' })
+    res.render('forget',{ title: 'Cargo', msg: '',succ:'',gmail:'',errors:'OTP NOT MATCHED' })
    }
   })
 
 })
 
 app.get('/forget',  (req,res)=> {
-  res.render('forget',{ title: 'College Dunia', msg: '',succ:'',email:'',errors:'' })
+  res.render('forget',{ title: 'Cargo', msg: '',succ:'',email:'',errors:'' })
 })
 app.get('/generate',(req,res)=> {
   res.render("generate",{title:"Create New Password",msg:'',gmail:'',succ:''})
@@ -122,7 +122,7 @@ app.post('/forget', async (req,res)=> {
     });
     userDetails.save((err, doc) => {
       if (err) throw err;
-      res.render('forget',{title:"college dunia", msg:"",succ:'OTP send in your mail',gmail:email,errors:''});
+      res.render('forget',{title:"cargo", msg:"",succ:'OTP send in your mail',gmail:email,errors:''});
    
     });
 
@@ -155,7 +155,7 @@ app.post('/forget', async (req,res)=> {
   })
   }
   else {
-    res.render("forget",{title:"college dunia", msg:"Email not exist",succ:'',errors:''})
+    res.render("forget",{title:"Cargo", msg:"Email not exist",succ:'',errors:''})
   }
   })
 
