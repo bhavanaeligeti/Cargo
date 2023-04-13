@@ -405,7 +405,7 @@ app.get("/loc/delete/:id",(req,res)=> {
 })
 
 app.get('/cancel',(req,res)=> {
-  res.render()
+  res.render("cancel")
 })
 app.get('/contact',(req,res)=> {
   res.render('contact',{msg:''})
